@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediere petiții ANP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center align all content */
+        }
+
+        #petitionForm {
+            display: inline-block;
+            text-align: left; /* Left align form elements */
+            margin-top: 20px; /* Add space between image and form */
+        }
+
+        #responseMessage {
+            color: red; /* Style response message */
+            display: inline-block; /* Make response message inline */
+            vertical-align: top; /* Align response message with button */
+        }
+
+        button {
+            background-color: #add8e6; /* Slight blue color for the button */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            vertical-align: top; /* Align button with response message */
+        }
+
+            button:hover {
+                background-color: #8ab8e6; /* Darker blue on hover */
+            }
+
+        #topImage {
+            width: 50%; /* Set image width */
+            max-width: 500px; /* Limit maximum image width */
+            margin: 0 auto; /* Center image */
+            display: block; /* Ensure the image behaves as a block element */
+        }
+
+        textarea {
+            font-size: 14px; /* Increase font size for textarea */
+        }
+
+        input, textarea {
+            margin-bottom: 10px; /* Add space between textboxes */
+        }
+    </style>
+</head>
+<body>
+    <img id="topImage" src="logo.png" alt="Top Image"> <!-- Replace your_image.jpg with your image path -->
+
+    <h2>Petiții ANP</h2>
+    <form id="petitionForm">
+        <label for="name">Nume Complet:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="petitionText">Text Petiție:</label><br>
+        <textarea id="petitionText" name="petitionText" rows="30" cols="80" required></textarea><br>
+        <button type="submit">Expediere Petiție</button>
+        <div id="responseMessage"></div>
+    </form>
+
+
+    <script>
+        document.getElementById('petitionForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                petitionText: document.getElementById('petitionText').value
+            };
+
+            // Make POST request to API
+            fetch('http://10.0.0.252:7147/Main/CreatePetition', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json(); // Return JSON response if request is successful
+                    } else {
+                        throw new Error('Expedierea a esuat');
+                    }
+                })
+                .then(data => {
+                    // Handle successful response
+                    document.getElementById('responseMessage').textContent = 'Expediat cu succes.';
+                })
+                .catch(error => {
+                    // Handle errors
+                    document.getElementById('responseMessage').textContent = 'Eroare: ' + error.message;
+                });
+        });
+    </script>
+</body>
+</html>

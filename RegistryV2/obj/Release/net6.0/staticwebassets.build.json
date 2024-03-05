@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "t1i+vzUKGWBIVXyqTIs6+ncyFxQXBAxstte6Xr2pNQo=",
+  "Source": "RegistryV2",
+  "BasePath": "_content/RegistryV2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "RegistryV2\\wwwroot",
+      "Source": "RegistryV2",
+      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "BasePath": "_content/RegistryV2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\logo.png",
+      "SourceId": "RegistryV2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "BasePath": "_content/RegistryV2",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\webpage.html",
+      "SourceId": "RegistryV2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "BasePath": "_content/RegistryV2",
+      "RelativePath": "webpage.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\webpage.html"
+    }
+  ]
+}
