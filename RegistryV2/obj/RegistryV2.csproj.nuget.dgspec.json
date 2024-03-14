@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\RegistryV2.csproj": {}
+    "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\RegistryV2.csproj": {
+    "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\RegistryV2.csproj",
+        "projectUniqueName": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj",
         "projectName": "RegistryV2",
-        "projectPath": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\RegistryV2.csproj",
+        "projectPath": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj",
         "packagesPath": "C:\\Users\\akula\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\obj\\",
+        "outputPath": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\akula\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,10 +47,6 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[7.0.11, )"
-            },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.19.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

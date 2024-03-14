@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\petitii.html",
+      "PackagePath": "staticwebassets\\petitii.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\win-x64\\staticwebassets\\msbuild.RegistryV2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\win-x64\\staticwebassets\\msbuild.build.RegistryV2.props",
+      "PackagePath": "build\\RegistryV2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\win-x64\\staticwebassets\\msbuild.buildMultiTargeting.RegistryV2.props",
+      "PackagePath": "buildMultiTargeting\\RegistryV2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\win-x64\\staticwebassets\\msbuild.buildTransitive.RegistryV2.props",
+      "PackagePath": "buildTransitive\\RegistryV2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

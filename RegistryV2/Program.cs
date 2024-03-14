@@ -33,7 +33,6 @@ namespace RegistryV2
             builder.Services.AddMvc().AddMvcOptions(options => options.EnableEndpointRouting = false);
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlite("Data Source=repairs.db"); // SQLite persistent database file
                 options.UseSqlite("Data Source=users.db");
             });
 

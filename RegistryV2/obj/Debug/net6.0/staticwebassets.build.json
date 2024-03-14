@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t1i+vzUKGWBIVXyqTIs6+ncyFxQXBAxstte6Xr2pNQo=",
+  "Hash": "b6PVkTyGdNij6FGpL4yfctNx9jkOrs7jiqdklUJA2bo=",
   "Source": "RegistryV2",
   "BasePath": "_content/RegistryV2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RegistryV2\\wwwroot",
       "Source": "RegistryV2",
-      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\logo.png",
+      "Identity": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\logo.png",
       "SourceId": "RegistryV2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "RelativePath": "logo.png",
       "AssetKind": "All",
@@ -36,12 +36,12 @@
       "OriginalItemSpec": "wwwroot\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\webpage.html",
+      "Identity": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\petitii.html",
       "SourceId": "RegistryV2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
-      "RelativePath": "webpage.html",
+      "RelativePath": "petitii.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\webpage.html"
+      "OriginalItemSpec": "wwwroot\\petitii.html"
     }
   ]
 }

@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|c:\\users\\administrator\\desktop\\petitionservice-main\\registryv2\\wwwroot\\petitii.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|solutionrelative:registryv2\\wwwroot\\petitii.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|c:\\users\\administrator\\desktop\\petitionservice-main\\registryv2\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|solutionrelative:registryv2\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|c:\\users\\administrator\\desktop\\petitionservice-main\\registryv2\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|solutionrelative:registryv2\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|c:\\users\\administrator\\desktop\\petitionservice-main\\registryv2\\petition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|solutionrelative:registryv2\\petition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|c:\\users\\administrator\\desktop\\petitionservice-main\\registryv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|solutionrelative:registryv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|c:\\users\\administrator\\desktop\\petitionservice-main\\registryv2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{22140D45-6E51-4A0A-B7D3-25BD0EEB7762}|RegistryV2\\RegistryV2.csproj|solutionrelative:registryv2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\DbContext.cs",
+              "RelativeDocumentMoniker": "RegistryV2\\DbContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\DbContext.cs",
+              "RelativeToolTip": "RegistryV2\\DbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T13:56:02.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Petition.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Petition.cs",
+              "RelativeDocumentMoniker": "RegistryV2\\Petition.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Petition.cs",
+              "RelativeToolTip": "RegistryV2\\Petition.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T13:55:44.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "RegistryV2\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Properties\\launchSettings.json",
+              "RelativeToolTip": "RegistryV2\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-05T06:53:49.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "petitii.html",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\petitii.html",
+              "RelativeDocumentMoniker": "RegistryV2\\wwwroot\\petitii.html",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\petitii.html",
+              "RelativeToolTip": "RegistryV2\\wwwroot\\petitii.html",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAB4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-05T06:48:03.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Program.cs",
+              "RelativeDocumentMoniker": "RegistryV2\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Program.cs",
+              "RelativeToolTip": "RegistryV2\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T06:48:03.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Controllers\\MainController.cs",
+              "RelativeDocumentMoniker": "RegistryV2\\Controllers\\MainController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\Controllers\\MainController.cs",
+              "RelativeToolTip": "RegistryV2\\Controllers\\MainController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T06:48:03.457Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\logo.png",
+      "Id": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\logo.png",
       "PackagePath": "staticwebassets\\logo.png"
     },
     {
-      "Id": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\webpage.html",
+      "Id": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\webpage.html",
       "PackagePath": "staticwebassets\\webpage.html"
     },
     {

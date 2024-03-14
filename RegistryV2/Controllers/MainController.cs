@@ -25,37 +25,18 @@ namespace RegistryV2.Controllers
         }
         */
 
-        private string[] allowedIpAddresses = { "10.0.0.134" }; // Add your allowed IP addresses here
+        private string[] allowedIpAddresses = { "10.0.0.134", "127.0.0.1" }; // Add your allowed IP addresses here
         private bool IsIpAllowed(IPAddress ipAddress, string[] allowedIpAddresses)
         {
+            Console.WriteLine(ipAddress.ToString());    
             foreach (var allowedIp in allowedIpAddresses)
             {
-                if (IPAddress.Parse(allowedIp).Equals(ipAddress))
+                if (IPAddress.Parse(allowedIp)==(ipAddress))
                 {
                     return true;
                 }
             }
             return false;
-        }
-
-        public IActionResult RestrictedEndpoint()
-        {
-            // Define allowed IP addresses
-            string[] allowedIpAddresses = { "10.0.0.134"}; // Add your allowed IP addresses here
-
-            // Get client IP address
-            var ipAddress = HttpContext.Connection.RemoteIpAddress;
-
-            // Check if the client IP address is allowed
-            if (!IsIpAllowed(ipAddress, allowedIpAddresses))
-            {
-                _logger.LogWarning($"Access denied for IP address: {ipAddress}");
-                return StatusCode((int)HttpStatusCode.Forbidden, "Access denied");
-            }
-
-            // If the IP address is allowed, proceed with the request
-            _logger.LogInformation($"Access granted for IP address: {ipAddress}");
-            return Ok("Access granted");
         }
 
         [HttpGet(Name = "GetItems")]
@@ -66,7 +47,6 @@ namespace RegistryV2.Controllers
             // Check if the client IP address is allowed
             if (!IsIpAllowed(ipAddress, allowedIpAddresses))
             {
-                _logger.LogWarning($"Access denied for IP address: {ipAddress}");
                 return StatusCode((int)HttpStatusCode.Forbidden, "Access denied");
             }
             return await _context.Petition.ToListAsync();
@@ -102,7 +82,6 @@ namespace RegistryV2.Controllers
             // Check if the client IP address is allowed
             if (!IsIpAllowed(ipAddress, allowedIpAddresses))
             {
-                _logger.LogWarning($"Access denied for IP address: {ipAddress}");
                 return StatusCode((int)HttpStatusCode.Forbidden, "Access denied");
             }
 
@@ -129,11 +108,7 @@ namespace RegistryV2.Controllers
             var ipAddress = HttpContext.Connection.RemoteIpAddress;
 
             // Check if the client IP address is allowed
-            if (!IsIpAllowed(ipAddress, allowedIpAddresses))
-            {
-                _logger.LogWarning($"Access denied for IP address: {ipAddress}");
-                return StatusCode((int)HttpStatusCode.Forbidden, "Access denied");
-            }
+            
             try
             {
                 var petition = await _context.Petition.FindAsync(id);
@@ -164,7 +139,6 @@ namespace RegistryV2.Controllers
             // Check if the client IP address is allowed
             if (!IsIpAllowed(ipAddress, allowedIpAddresses))
             {
-                _logger.LogWarning($"Access denied for IP address: {ipAddress}");
                 return StatusCode((int)HttpStatusCode.Forbidden, "Access denied");
             }
             try
@@ -191,7 +165,6 @@ namespace RegistryV2.Controllers
             // Check if the client IP address is allowed
             if (!IsIpAllowed(ipAddress, allowedIpAddresses))
             {
-                _logger.LogWarning($"Access denied for IP address: {ipAddress}");
                 return StatusCode((int)HttpStatusCode.Forbidden, "Access denied");
             }
             try

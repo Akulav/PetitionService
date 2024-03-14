@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GoieUXuJ6WiL9qmCXdXlVpy0N1H3RIpKwmBWaoI+T9k=",
+  "Hash": "eE6vEqmEtvdWbgZ7WAGnICGQOScqP8UOk0U/SqT68cE=",
   "Source": "RegistryV2",
   "BasePath": "_content/RegistryV2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RegistryV2\\wwwroot",
       "Source": "RegistryV2",
-      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\logo.png",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\logo.png",
       "SourceId": "RegistryV2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "RelativePath": "logo.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\webpage.html",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\webpage.html",
       "SourceId": "RegistryV2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "RelativePath": "webpage.html",
       "AssetKind": "All",

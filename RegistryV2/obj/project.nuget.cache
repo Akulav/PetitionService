@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eri7F/Z6XdEDnLBxop9W1v2JMN7uZmUQFHI9M/LytTMDBok39y0pJXEFDlobWwQHzwEFcU/MQWBhDrr+OXtQMA==",
+  "dgSpecHash": "zw9OLZElWzM2JuwbZQDghavykZmw9x0GQgn+qJJIr4I9Lj9bsW2bY3OfUNhyPYD0QHaMEDKkYe9B5DaU8H8phQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\akula\\source\\repos\\RegistryV2.0\\RegistryV2\\RegistryV2.csproj",
+  "projectFilePath": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\akula\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.11\\microsoft.data.sqlite.core.7.0.11.nupkg.sha512",
     "C:\\Users\\akula\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
@@ -23,7 +23,6 @@
     "C:\\Users\\akula\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\akula\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\akula\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\akula\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
     "C:\\Users\\akula\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\akula\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
     "C:\\Users\\akula\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",

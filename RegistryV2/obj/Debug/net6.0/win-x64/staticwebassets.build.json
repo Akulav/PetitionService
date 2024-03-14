@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "biCWxZacxbMv5FMk3O1cvAniz7SgI93UsIxq9AS6SRI=",
+  "Source": "RegistryV2",
+  "BasePath": "_content/RegistryV2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "RegistryV2\\wwwroot",
+      "Source": "RegistryV2",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
+      "BasePath": "_content/RegistryV2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\logo.png",
+      "SourceId": "RegistryV2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
+      "BasePath": "_content/RegistryV2",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\petitii.html",
+      "SourceId": "RegistryV2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
+      "BasePath": "_content/RegistryV2",
+      "RelativePath": "petitii.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\petitii.html"
+    }
+  ]
+}
