@@ -6,7 +6,7 @@ namespace RegistryV2
     {
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
 
-        public int Id { get; set; }
+        public int Id { get; set;}
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public DateTime Date { get; } = DateTime.UtcNow;

@@ -25,13 +25,25 @@ namespace RegistryV2.Controllers
         }
         */
 
-        private string[] allowedIpAddresses = { "10.0.0.134", "127.0.0.1" }; // Add your allowed IP addresses here
-        private bool IsIpAllowed(IPAddress ipAddress, string[] allowedIpAddresses)
+        private string[] allowedIpAddresses = { "10.0.0.134", "127.0.0.1", "10.111.111.117" }; // Add your allowed IP addresses here
+        private static bool IsIpAllowed(IPAddress ipAddress, string[] allowedIpAddresses)
         {
-            Console.WriteLine(ipAddress.ToString());    
+            Console.WriteLine(ipAddress.ToString());
+
+            // Check if it's an IPv6 formatted IPv4 address, and if so, convert it to IPv4
+            if (ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6 &&
+                ipAddress.IsIPv4MappedToIPv6)
+            {
+                ipAddress = ipAddress.MapToIPv4();
+            }
+
             foreach (var allowedIp in allowedIpAddresses)
             {
-                if (IPAddress.Parse(allowedIp)==(ipAddress))
+                // Convert each allowed IP to IPAddress format for comparison
+                IPAddress allowedIpAddress = IPAddress.Parse(allowedIp);
+
+                // Check if the IP addresses are equal
+                if (IPAddress.Equals(allowedIpAddress, ipAddress))
                 {
                     return true;
                 }
@@ -39,7 +51,8 @@ namespace RegistryV2.Controllers
             return false;
         }
 
-        [HttpGet(Name = "GetItems")]
+        [Route("GetItems")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Petition>>> GetItems()
         {
             var ipAddress = HttpContext.Connection.RemoteIpAddress;
@@ -74,7 +87,8 @@ namespace RegistryV2.Controllers
             return CreatedAtAction(nameof(GetItem), new { item.Id }, item);
         }
 
-        [HttpGet("Get{id}")]
+        [Route("Get{id}")]
+        [HttpGet]
         public async Task<ActionResult<Petition>> GetItem(int id)
         {
             var ipAddress = HttpContext.Connection.RemoteIpAddress;
@@ -102,13 +116,14 @@ namespace RegistryV2.Controllers
             }
         }
 
-        [HttpPut("UpdateReadFlag/{id}")]
+        [Route("UpdateReadFlag/{id}")]
+        [HttpPut]
         public async Task<IActionResult> UpdateReadFlag(int id)
         {
             var ipAddress = HttpContext.Connection.RemoteIpAddress;
 
             // Check if the client IP address is allowed
-            
+
             try
             {
                 var petition = await _context.Petition.FindAsync(id);
@@ -131,7 +146,8 @@ namespace RegistryV2.Controllers
         }
 
 
-        [HttpGet("latest/{n}")]
+        [Route("latest/{n}")]
+        [HttpGet]
         public ActionResult<IEnumerable<Petition>> GetLatestNRows(int n)
         {
             var ipAddress = HttpContext.Connection.RemoteIpAddress;
@@ -157,7 +173,8 @@ namespace RegistryV2.Controllers
             }
         }
 
-        [HttpGet("unread/{n}")]
+        [Route("unread/{n}")]
+        [HttpGet]
         public ActionResult<IEnumerable<Petition>> GetLatestNRowsWithFlag(int n)
         {
             var ipAddress = HttpContext.Connection.RemoteIpAddress;
@@ -185,15 +202,14 @@ namespace RegistryV2.Controllers
         }
 
 
-        [HttpGet("health")]
+        [Route("health")]
+        [HttpGet]
         public IActionResult CheckHealth()
         {
             // You can perform additional health checks here if needed.
             // For a simple check, just return an "OK" response.
             return Ok("The service is working");
         }
-
-
 
     }
 }
