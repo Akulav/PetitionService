@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\logo.png",
+      "Id": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\logo.png",
       "PackagePath": "staticwebassets\\logo.png"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\webpage.html",
-      "PackagePath": "staticwebassets\\webpage.html"
+      "Id": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\petitii.html",
+      "PackagePath": "staticwebassets\\petitii.html"
     },
     {
       "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.RegistryV2.Microsoft.AspNetCore.StaticWebAssets.props",

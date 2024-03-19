@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
+using System.Text.Json.Serialization;
 
 namespace RegistryV2.Controllers
 {
@@ -67,24 +68,63 @@ namespace RegistryV2.Controllers
 
         [Route("CreatePetition")]
         [HttpPost]
-        public async Task<IActionResult> PostItem(Petition item)
+        public async Task<IActionResult> PostItem([FromForm] PetitionWithFile petitionWithFile)
         {
-
-
-            if (item == null)
+            if (petitionWithFile == null)
             {
                 return BadRequest();
             }
 
-            var latestRepair = _context.Petition.OrderByDescending(r => r.Id).FirstOrDefault();
-            int latestId = latestRepair?.Id ?? 0;
-            item.Id = latestId + 1;
-            item.readFlag = false;
+            var latestPetition = _context.Petition.OrderByDescending(r => r.Id).FirstOrDefault();
+            int latestId = latestPetition?.Id ?? 0;
+
+            string filePath = null;
+
+            if (petitionWithFile.File != null && petitionWithFile.File.Length > 5 * 1024 * 1024) // 5 MB in bytes
+            {
+                return StatusCode(505);
+            }
+
+            if (petitionWithFile.File != null && petitionWithFile.File.Length > 0)
+            {
+                // Generate a unique file name
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(petitionWithFile.File.FileName);
+                var uploads = "uploads";
+
+                // Create the uploads directory if it doesn't exist
+                if (!Directory.Exists(uploads))
+                {
+                    Directory.CreateDirectory(uploads);
+                }
+
+                filePath = Path.Combine(uploads, fileName);
+
+                // Copy the file to the uploads directory
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await petitionWithFile.File.CopyToAsync(fileStream);
+                }
+            }
+
+            var item = new Petition
+            {
+                Id = latestId + 1,
+                Name = petitionWithFile.Name,
+                PetitionText = petitionWithFile.PetitionText,
+                Email = petitionWithFile.Email,
+                readFlag = false,
+                FilePath = filePath // Store the file path instead of IFormFile
+            };
 
             _context.Petition.Add(item);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetItem), new { item.Id }, item);
+        }
+
+        public class PetitionWithFile : Petition
+        {
+            public IFormFile? File { get; set; }
         }
 
         [Route("Get{id}")]

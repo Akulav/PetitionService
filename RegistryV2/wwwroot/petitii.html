@@ -58,41 +58,45 @@
     <img id="topImage" src="logo.png" alt="Top Image"> <!-- Replace your_image.jpg with your image path -->
 
     <h2>Petiții ANP</h2>
-    <form id="petitionForm">
+    <form id="petitionForm" enctype="multipart/form-data">
+        <!-- Add enctype for file upload -->
         <label for="name">Nume Complet:</label><br>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br>
         <label for="petitionText">Text Petiție:</label><br>
         <textarea id="petitionText" name="petitionText" rows="30" cols="80" required></textarea><br>
+        <!-- Add file input -->
+        <label for="file">Selectați fișier:</label><br>
+        <input type="file" id="file" name="file"><br>
         <button type="submit">Expediere Petiție</button>
         <div id="responseMessage"></div>
     </form>
-
 
     <script>
         document.getElementById('petitionForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the form from submitting normally
 
             // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                petitionText: document.getElementById('petitionText').value
-            };
+            const formData = new FormData();
+            formData.append('name', document.getElementById('name').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('petitionText', document.getElementById('petitionText').value);
+            formData.append('file', document.getElementById('file').files[0]); // Append file
 
             // Make POST request to API
             fetch('http://10.0.0.252:7148/Main/CreatePetition', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
+                body: formData
             })
                 .then(response => {
                     if (response.ok) {
                         return response.json(); // Return JSON response if request is successful
-                    } else {
+                    }
+                    else if (response.status === 505){
+                        throw new Error('Marimea maxima a fisierului este de 5mb.');
+                    }
+                    else {
                         throw new Error('Expedierea a esuat');
                     }
                 })

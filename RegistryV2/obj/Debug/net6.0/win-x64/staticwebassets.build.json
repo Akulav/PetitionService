@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "biCWxZacxbMv5FMk3O1cvAniz7SgI93UsIxq9AS6SRI=",
+  "Hash": "b6PVkTyGdNij6FGpL4yfctNx9jkOrs7jiqdklUJA2bo=",
   "Source": "RegistryV2",
   "BasePath": "_content/RegistryV2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RegistryV2\\wwwroot",
       "Source": "RegistryV2",
-      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\logo.png",
+      "Identity": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\logo.png",
       "SourceId": "RegistryV2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "RelativePath": "logo.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\petitii.html",
+      "Identity": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\petitii.html",
       "SourceId": "RegistryV2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\wwwroot\\",
       "BasePath": "_content/RegistryV2",
       "RelativePath": "petitii.html",
       "AssetKind": "All",

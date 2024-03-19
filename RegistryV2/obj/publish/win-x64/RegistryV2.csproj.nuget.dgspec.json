@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\RegistryV2.csproj": {}
+    "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\RegistryV2.csproj": {
+    "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\RegistryV2.csproj",
+        "projectUniqueName": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj",
         "projectName": "RegistryV2",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\RegistryV2.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\PetitionService-main\\RegistryV2\\obj\\publish\\win-x64\\",
+        "projectPath": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\RegistryV2.csproj",
+        "packagesPath": "C:\\Users\\akula\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\akula\\Desktop\\PetitionService\\RegistryV2\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\akula\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,24 +64,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -95,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
