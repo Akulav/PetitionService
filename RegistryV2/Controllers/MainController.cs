@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
-using System.Text.Json.Serialization;
 
 namespace RegistryV2.Controllers
 {
@@ -52,6 +51,13 @@ namespace RegistryV2.Controllers
             return false;
         }
 
+        public class PetitionWithFile : Petition
+        {
+            public IFormFile? File { get; set; }
+        }
+
+
+
         [Route("GetItems")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Petition>>> GetItems()
@@ -79,6 +85,7 @@ namespace RegistryV2.Controllers
             int latestId = latestPetition?.Id ?? 0;
 
             string filePath = null;
+            string fileName = null;
 
             if (petitionWithFile.File != null && petitionWithFile.File.Length > 5 * 1024 * 1024) // 5 MB in bytes
             {
@@ -88,7 +95,7 @@ namespace RegistryV2.Controllers
             if (petitionWithFile.File != null && petitionWithFile.File.Length > 0)
             {
                 // Generate a unique file name
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(petitionWithFile.File.FileName);
+                fileName = Guid.NewGuid().ToString() + Path.GetExtension(petitionWithFile.File.FileName);
                 var uploads = "uploads";
 
                 // Create the uploads directory if it doesn't exist
@@ -104,6 +111,7 @@ namespace RegistryV2.Controllers
                 {
                     await petitionWithFile.File.CopyToAsync(fileStream);
                 }
+
             }
 
             var item = new Petition
@@ -113,18 +121,13 @@ namespace RegistryV2.Controllers
                 PetitionText = petitionWithFile.PetitionText,
                 Email = petitionWithFile.Email,
                 readFlag = false,
-                FilePath = filePath // Store the file path instead of IFormFile
+                FilePath = fileName // Store the file path instead of IFormFile
             };
 
             _context.Petition.Add(item);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetItem), new { item.Id }, item);
-        }
-
-        public class PetitionWithFile : Petition
-        {
-            public IFormFile? File { get; set; }
         }
 
         [Route("Get{id}")]
@@ -213,6 +216,8 @@ namespace RegistryV2.Controllers
             }
         }
 
+
+
         [Route("unread/{n}")]
         [HttpGet]
         public ActionResult<IEnumerable<Petition>> GetLatestNRowsWithFlag(int n)
@@ -241,6 +246,56 @@ namespace RegistryV2.Controllers
             }
         }
 
+        [Route("files/")]
+        [HttpGet]
+        public IActionResult GetFile(string filePath)
+        {
+            // Check if the file exists
+            filePath = Path.Combine("uploads", filePath);
+            filePath = Path.GetFullPath(filePath);
+
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound("File not found");
+            }
+
+            // Return the file with its original name and extension
+            return PhysicalFile(filePath, "application/octet-stream"); // application/octet-stream denotes a generic binary file
+        }
+
+
+        [Route("page/{pageNumber}")]
+        [HttpGet]
+        public ActionResult<IEnumerable<Petition>> GetNextRows(int pageNumber)
+        {
+            var ipAddress = HttpContext.Connection.RemoteIpAddress;
+
+            // Check if the client IP address is allowed
+            if (!IsIpAllowed(ipAddress, allowedIpAddresses))
+            {
+                return StatusCode((int)HttpStatusCode.Forbidden, "Access denied");
+            }
+
+            try
+            {
+                // Calculate skip count
+                int skipCount = (pageNumber - 1) * 10;
+
+                var nextRows = _context.Petition
+                    .OrderBy(e => e.Id)
+                    .Skip(skipCount)
+                    .Take(10)
+                    .ToList();
+
+                return Ok(nextRows);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions as needed
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
 
         [Route("health")]
         [HttpGet]
