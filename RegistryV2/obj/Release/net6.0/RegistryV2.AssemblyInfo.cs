@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RegistryV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00f521e17235c44ccb6178aa5359c53024d72cfb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa7d4502adba8e2792ead5eb8b2566655436948a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RegistryV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RegistryV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

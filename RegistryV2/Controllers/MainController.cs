@@ -25,7 +25,7 @@ namespace RegistryV2.Controllers
         }
         */
 
-        private string[] allowedIpAddresses = { "10.0.0.134", "127.0.0.1", "10.111.111.117" }; // Add your allowed IP addresses here
+        private string[] allowedIpAddresses = { "10.0.0.134", "127.0.0.1", "10.111.111.117", "10.111.111.242", "10.111.111.199" }; // Add your allowed IP addresses here
         private static bool IsIpAllowed(IPAddress ipAddress, string[] allowedIpAddresses)
         {
             Console.WriteLine(ipAddress.ToString());
@@ -121,6 +121,7 @@ namespace RegistryV2.Controllers
                 PetitionText = petitionWithFile.PetitionText,
                 Email = petitionWithFile.Email,
                 readFlag = false,
+                Date = DateTime.UtcNow,
                 FilePath = fileName // Store the file path instead of IFormFile
             };
 
@@ -279,13 +280,16 @@ namespace RegistryV2.Controllers
 
             try
             {
-                // Calculate skip count
-                int skipCount = (pageNumber - 1) * 10;
+                // Calculate total number of petitions
+                int totalCount = _context.Petition.Count();
+
+                // Calculate the starting point for the query
+                int startId = totalCount - (pageNumber - 1) * 10;
+                int endId = Math.Max(startId - 9, 1); // Ensure we don't go below 1
 
                 var nextRows = _context.Petition
-                    .OrderBy(e => e.Id)
-                    .Skip(skipCount)
-                    .Take(10)
+                    .Where(e => e.Id >= endId && e.Id <= startId)
+                    .OrderByDescending(e => e.Id)
                     .ToList();
 
                 return Ok(nextRows);
@@ -296,6 +300,7 @@ namespace RegistryV2.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
 
         [Route("health")]
         [HttpGet]
